@@ -38,3 +38,41 @@ fun main() {
     println("Total a pagar: $$total")
 }
 ```
+
+**EJERCICIO 2 (VERSIÓN IF)**
+```
+fun main() {
+    print("INGRESE SU NOTA: ")
+    val nota = readln().toDouble()
+
+    if (nota >= 1.0 && nota <= 7.0) {
+        if(nota < 4.0) {
+            println("Reprobado")
+        } else if (nota >= 4.0 && nota <= 4.9) {
+            println("Aprobado")
+        } else if (nota >= 5.0 && nota <= 5.9) {
+            println("Buen rendimiento")
+        } else {
+            println("Excelente rendimiento")
+        }
+    } else {
+        println("Nota no válida")
+    }
+}
+```
+
+**EJERCICIO 2 (VERSIÓN WHEN)**
+```
+fun main() {
+    print("INGRESE SU NOTA: ")
+    val nota = readln().toDouble()
+
+    when (nota) {
+        in 1.0..3.9 -> println("Reprobado")
+        in 4.0..4.9 -> println("Aprobado")
+        in 5.0..5.9 -> println("Buen rendimiento")
+        in 6.0..7.0 -> println("Excelente rendimiento")
+        else -> println("Nota no válida")
+    }
+}
+```
