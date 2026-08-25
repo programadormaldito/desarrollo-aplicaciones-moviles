@@ -76,3 +76,58 @@ fun main() {
     }
 }
 ```
+
+**EJERCICIO 3**
+```
+fun main() {
+    var opcion = ""
+
+    while (opcion != "4") {
+        println("======================")
+        println("    MENÚ PRINCIPAL    ")
+        println("======================")
+        println("1.- Tabla de multiplicar")
+        println("2.- Determinar par o impar")
+        println("3.- Comparar dos números")
+        println("4.- Salir")
+        print("Ingrese opción: ")
+        opcion = readln()
+
+        when (opcion) {
+            "1" -> {
+                print("INGRESE NÚMERO: ")
+                val numero = readln().toInt()
+
+                for(i in 1..10) {
+                    println("$numero x $i = ${numero * i}")
+                }
+            }
+            "2" -> {
+                print("INGRESE NÚMERO: ")
+                val numero = readln().toInt()
+
+                if(numero % 2 == 0) println("Su número es par")
+                else println("Su número es impar")
+            }
+            "3" -> {
+                print("INGRESE N°1: ")
+                val numero1 = readln().toInt()
+
+                print("INGRESE N°2: ")
+                val numero2 = readln().toInt()
+
+                if(numero1 > numero2) {
+                    println("$numero1 es mayor a $numero2")
+                } else if (numero2 > numero1) {
+                    println("$numero2 es mayor a $numero1")
+                } else {
+                    println("Los números son iguales")
+                }
+            }
+            "4" -> println("Gracias por utilizar nuestro sistema")
+            else -> println("La opción ingresada no es válida")
+        }
+
+    }
+}
+```
